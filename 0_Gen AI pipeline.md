@@ -1,8 +1,7 @@
 # 🧠 Generative AI Pipeline – Complete Deep Dive (Step-by-Step)
 
 This document expands the original pipeline into a **production-grade, architect-level understanding** with deep explanations, internal mechanics, and implementation insights.
-
-<img width="1800" height="1500" alt="image" src="https://github.com/user-attachments/assets/7a5a8d21-54a3-46f0-9144-068c34fca271" />
+<img width="1800" height="1500" alt="image" src="https://github.com/user-attachments/assets/c8b080a0-a766-4830-bc7a-edc04974f8ef" />
 
 ---
 
@@ -601,13 +600,70 @@ Examples:
 
 ## Why needed?
 
-To measure accuracy and reliability
+To measure accuracy, quality, and reliability of GenAI systems.
 
-Metrics:
+---
 
-* Precision
-* Recall
-* Faithfulness
+### 🔹 A. Intrinsic Evaluation (Model-Level Evaluation)
+
+Performed **during model development/training** by GenAI engineers.
+
+#### What it evaluates
+
+* Model performance on predefined datasets
+* Quality of generated outputs using metrics
+
+#### Common Metrics
+
+* Accuracy
+* Precision / Recall / F1-score
+* Perplexity
+* BLEU (for translation)
+* ROUGE (for summarization)
+* AUC-ROC (for classification tasks)
+
+#### Key Insight
+
+* Focuses on **how well the model itself performs**
+* Controlled environment (benchmarks, datasets)
+
+---
+
+### 🔹 B. Extrinsic Evaluation (System-Level Evaluation)
+
+Performed **after deployment or during integration**.
+
+#### What it evaluates
+
+* Real-world usefulness of the system
+* End-to-end pipeline performance
+
+#### Examples
+
+* Does RAG retrieve correct context?
+* Is the final answer helpful to users?
+* Task success rate (e.g., correct QA response)
+
+#### Methods
+
+* Human evaluation (ratings, feedback)
+* A/B testing
+* User satisfaction scores
+
+#### Key Insight
+
+* Focuses on **how well the system performs in real use cases**
+
+---
+
+### 🔥 Intrinsic vs Extrinsic (Quick View)
+
+| Aspect       | Intrinsic          | Extrinsic              |
+| ------------ | ------------------ | ---------------------- |
+| Stage        | During training    | After deployment       |
+| Focus        | Model performance  | System usefulness      |
+| Metrics      | BLEU, ROUGE, AUC   | User success, feedback |
+| Performed by | ML/GenAI Engineers | Product/Users          |
 
 ---
 
